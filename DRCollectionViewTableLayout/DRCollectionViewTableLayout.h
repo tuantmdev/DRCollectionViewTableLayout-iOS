@@ -20,6 +20,11 @@ static NSString * const DRCollectionViewTableLayoutSupplementaryViewColumnHeader
  */
 static NSString * const DRCollectionViewTableLayoutSupplementaryViewRowHeader = @"DRCollectionViewTableLayoutSupplementaryViewRowHeader";
 
+/**
+ *  Supplementary View kind for column background
+ */
+static NSString * const DRCollectionViewTableLayoutSupplementaryViewColumnBackground = @"DRCollectionViewTableLayoutSupplementaryViewColumnBackground";
+
 @class DRCollectionViewTableLayout;
 
 /**

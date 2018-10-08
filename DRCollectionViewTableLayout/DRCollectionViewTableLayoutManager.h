@@ -159,6 +159,19 @@
                                                      indexPath:(NSIndexPath *)indexPath;
 
 /**
+ *  Return view for column background
+ *
+ *  @param manager        Collection View Table Layout Manager
+ *  @param collectionView Collection View
+ *  @param indexPath      Collection View Supplementary View index path
+ *
+ *  @return Collection Reusable View
+ */
+- (UICollectionReusableView *)collectionViewTableLayoutManager:(DRCollectionViewTableLayoutManager *)manager
+                                                collectionView:(UICollectionView *)collectionView
+                                  columnBackgroundForIndexPath:(NSIndexPath *)indexPath;
+
+/**
  *  Return YES if row headers in given section should stick to left edge
  *
  *  @param manager        Collection View Table Layout Manager

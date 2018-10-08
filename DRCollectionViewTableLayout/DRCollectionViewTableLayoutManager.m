@@ -91,8 +91,23 @@
                                                 collectionView:collectionView
                                               headerViewForRow:row
                                                      indexPath:indexPath];
+    } else if ([kind isEqualToString:DRCollectionViewTableLayoutSupplementaryViewColumnBackground]) {
+        
+        #ifdef DEBUG
+        
+        SEL selector = @selector(collectionViewTableLayoutManager:collectionView:columnBackgroundForIndexPath:);
+        NSAssert([self.delegate respondsToSelector:selector],
+                 @"DRCollectionViewTableLayoutManagerDelegate should respond to selector %@", NSStringFromSelector(selector));
+        
+        NSAssert([collectionView.collectionViewLayout isKindOfClass:[DRCollectionViewTableLayout class]],
+                 @"DRCollectionViewTableLayoutManagerDelegate can be used only with collection views with DRCollectionViewTableLayout layout");
+        
+        #endif
+        
+        return [self.delegate collectionViewTableLayoutManager:self
+                                                collectionView:collectionView
+                                  columnBackgroundForIndexPath:indexPath];
     }
-    
     return nil;
 }
 
